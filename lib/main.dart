@@ -1,4 +1,24 @@
 import 'package:flutter/material.dart';
+import 'splash1.dart'; //tem que importar
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, // Remove aquela etiqueta do debug
+      home: Splash1(), // Referencio a classe no outro arquivo
+    );
+  }
+}
+
+/*
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -62,3 +82,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+*/
