@@ -19,7 +19,7 @@ class Cartao extends StatelessWidget {
         children: [
           Image.asset(linkdaimage, color: corTextos, width: 20, height: 20),
           SizedBox(width: 20),
-          Text(texto, style: estilo2),
+          Text(texto, style: TextStyle(color: corTextos)),
         ],
       ),
     );

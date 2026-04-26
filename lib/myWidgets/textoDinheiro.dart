@@ -16,7 +16,7 @@ class TextMoney extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(texto, style: estiloPreto),
-            Icon(Icons.chevron_right),
+            Icon(Icons.chevron_right, color: corTextos),
           ],
         ),
         Text('R\$ $dinheiro', style: estiloPreto),
@@ -43,11 +43,11 @@ class TextoMoneyDescription extends TextMoney {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(texto, style: estiloPreto),
-            Icon(Icons.chevron_right),
+            Icon(Icons.chevron_right, color: corTextos),
           ],
         ),
         SizedBox(height: 10),
-        Text(subtexto),
+        Text(subtexto, style: TextStyle(color: corTextos)),
         SizedBox(height: 2),
         Text('R\$ $dinheiro', style: estiloPreto),
       ],
