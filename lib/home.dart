@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/components/appBar.dart';
-import 'myWidgets/bolinha.dart';
+import 'components/appBar.dart';
 import 'components/styles.dart';
+import 'myWidgets/linha.dart';
+import 'myWidgets/textoDinheiro.dart';
+import 'myWidgets/bolinha.dart';
+import 'myWidgets/cartao.dart';
+import 'myWidgets/bloco.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -17,21 +21,9 @@ class _Home extends State<Home> {
         padding: EdgeInsets.all(20),
         child: ListView(
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Saldo em conta", style: estiloPreto),
-                    Icon(Icons.chevron_right),
-                  ],
-                ),
-                Text("R\$ 2.000,00", style: estiloPreto),
-              ],
-            ),
+            TextMoney('Saldo em conta', '1.518,38'),
             Container(
-              margin: EdgeInsets.only(top: 30),
+              margin: EdgeInsetsGeometry.symmetric(vertical: 30),
               height: 90,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -48,6 +40,69 @@ class _Home extends State<Home> {
                   ),
                 ],
               ),
+            ),
+
+            Cartao('assets/figuras/celularzinho.png', 'Meus Cartões'),
+
+            Linha(),
+
+            TextoMoneyDescription('Cartão de crédito', 'Fatura Atual', '16,44'),
+            SizedBox(height: 10),
+            Text('Limite disponível de R\$ 983,56'),
+
+            Linha(),
+            TextoMoneyDescription(
+              'Empréstimo',
+              'Valor disponivel de até',
+              '50.000,00',
+            ),
+
+            Linha(),
+
+            TextMoney('Total em Caixinhas', '0,00'),
+
+            Bloco(
+              100,
+              const Color.fromARGB(255, 218, 234, 247),
+              Icon(Icons.add),
+            ),
+            Row(children: [SizedBox(width: 5), Text('Criar caixinha')]),
+
+            Linha(),
+
+            Text('Descubra mais', style: estiloPreto),
+
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Bloco(170, corSecundaria, Icon(Icons.photo_library_sharp)),
+                  Bloco(170, corSecundaria, Icon(Icons.photo_library_sharp)),
+                  Bloco(170, corSecundaria, Icon(Icons.photo_library_sharp)),
+                ],
+              ),
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.favorite_border_outlined,
+                  color: corNubank,
+                  size: 20,
+                ),
+                SizedBox(width: 10),
+                Text(
+                  'Avalie esta tela',
+                  style: TextStyle(
+                    color: corNubank,
+                    fontSize: 15,
+                    fontWeight: FontWeight(700),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
