@@ -115,7 +115,7 @@ class _Home extends State<Home> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Olá, Gabriel Boquinha Aberta",
+                        "Olá, Gabriel",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight(500),
@@ -159,7 +159,7 @@ class _Home extends State<Home> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "R\$-2.000.000.000",
+                        "R\$2.000.000.000",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight(800),
