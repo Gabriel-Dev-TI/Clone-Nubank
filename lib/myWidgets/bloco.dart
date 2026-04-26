@@ -47,7 +47,14 @@ class BlocoInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(flex: 4, child: Image.asset(linkImg)),
+        Expanded(
+          flex: 4,
+          child: ClipRRect(
+            //dar borda arredondada para a imagem
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(linkImg, fit: BoxFit.fill),
+          ),
+        ),
         Expanded(
           flex: 5,
           child: Padding(

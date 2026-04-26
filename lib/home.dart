@@ -99,7 +99,7 @@ class _Home extends State<Home> {
                         titulo: 'Indique o Nu para amigos',
                         descricao: 'Espalhe como é simples estar no controle.',
                         buttonText: 'Indicar amigos',
-                        linkImg: 'assets/NubankLogo.png',
+                        linkImg: 'assets/indiqueC.jpeg',
                       ),
                     ),
                     Bloco(
@@ -111,7 +111,7 @@ class _Home extends State<Home> {
                         descricao:
                             'Liberdade é escolher onde receber seu dinheiro.',
                         buttonText: 'Conhecer',
-                        linkImg: 'assets/NubankLogo.png',
+                        linkImg: 'assets/portabilidadeN.jpg',
                       ),
                     ),
                     Bloco(
@@ -123,7 +123,7 @@ class _Home extends State<Home> {
                         descricao:
                             'Pague usando só o seu celular ou relógio Samsung.',
                         buttonText: 'Conhecer mais',
-                        linkImg: 'assets/NubankLogo.png',
+                        linkImg: 'assets/samsungN.jpg',
                       ),
                     ),
                   ],
