@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'splash.dart'; //tem que importar
+import 'components/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: temaClaro,
       debugShowCheckedModeBanner: false, // Remove aquela etiqueta do debug
       home: Splash(), // Referencio a classe no outro arquivo
     );

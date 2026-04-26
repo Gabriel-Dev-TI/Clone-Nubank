@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank/login.dart';
+import 'components/styles.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});
@@ -24,7 +25,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF8A19D6),
+      backgroundColor: corNubank,
       body: Center(
         child: Padding(
           padding: EdgeInsets.only(bottom: 80),

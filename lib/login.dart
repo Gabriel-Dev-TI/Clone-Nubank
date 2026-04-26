@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank/home.dart';
+import 'components/styles.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -7,7 +8,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF8A19D6),
+      backgroundColor: corNubank,
       body: Column(
         children: [
           Expanded(child: Image.asset('assets/NubankLogo.png')),
