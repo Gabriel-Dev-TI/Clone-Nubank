@@ -19,7 +19,7 @@ class _Home extends State<Home> {
       appBar: appBarNubank,
       backgroundColor: corFundo,
       body: GestureDetector(
-        onDoubleTap: () => setState(() {
+        onTap: () => setState(() {
           trocarTema();
         }),
         child: Padding(
@@ -73,8 +73,13 @@ class _Home extends State<Home> {
 
               TextMoney('Total em Caixinhas', '0,00'),
 
-              Bloco(100, corBloco, Icon(Icons.add)),
-              Row(children: [SizedBox(width: 5), Text('Criar caixinha')]),
+              Bloco(100, 100, corBloco, Icon(Icons.add)),
+              Row(
+                children: [
+                  SizedBox(width: 5),
+                  Text('Criar caixinha', style: TextStyle(color: corTextos)),
+                ],
+              ),
 
               Linha(),
 
@@ -82,13 +87,45 @@ class _Home extends State<Home> {
 
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10),
-                height: 200,
+                height: 330,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Bloco(170, corSecundaria, Icon(Icons.photo_library_sharp)),
-                    Bloco(170, corSecundaria, Icon(Icons.photo_library_sharp)),
-                    Bloco(170, corSecundaria, Icon(Icons.photo_library_sharp)),
+                    Bloco(
+                      300,
+                      210,
+                      corSecundaria,
+                      BlocoInfo(
+                        titulo: 'Indique o Nu para amigos',
+                        descricao: 'Espalhe como é simples estar no controle.',
+                        buttonText: 'Indicar amigos',
+                        linkImg: 'assets/NubankLogo.png',
+                      ),
+                    ),
+                    Bloco(
+                      300,
+                      210,
+                      corSecundaria,
+                      BlocoInfo(
+                        titulo: 'Portabilidade de salário',
+                        descricao:
+                            'Liberdade é escolher onde receber seu dinheiro.',
+                        buttonText: 'Conhecer',
+                        linkImg: 'assets/NubankLogo.png',
+                      ),
+                    ),
+                    Bloco(
+                      300,
+                      210,
+                      corSecundaria,
+                      BlocoInfo(
+                        titulo: 'Samsung Pay',
+                        descricao:
+                            'Pague usando só o seu celular ou relógio Samsung.',
+                        buttonText: 'Conhecer mais',
+                        linkImg: 'assets/NubankLogo.png',
+                      ),
+                    ),
                   ],
                 ),
               ),

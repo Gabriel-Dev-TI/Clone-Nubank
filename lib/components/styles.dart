@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Color corNubank = Color(0xFF8A19D6);
-Color corSecundaria = Color(0xFFF0F1F5);
+Color corSecundaria = Color.fromARGB(255, 218, 218, 218);
 Color corTextos = Colors.black;
 Color corFundo = Colors.white;
 Color corBloco = const Color.fromARGB(255, 218, 234, 247);
@@ -19,9 +19,9 @@ void trocarTema() {
   //altera o tema para escuro ou claro
   corFundo = corFundo == Colors.black ? Colors.white : Colors.black;
   corTextos = corTextos == Colors.black ? Colors.white : Colors.black;
-  corSecundaria = corSecundaria == Color(0xFFF0F1F5)
-      ? Color.fromARGB(255, 56, 56, 56)
-      : Color(0xFFF0F1F5);
+  corSecundaria = corSecundaria ==Color.fromARGB(255, 218, 218, 218)
+      ? Color.fromARGB(255, 46, 46, 46)
+      :Color.fromARGB(255, 218, 218, 218);
   corBloco = corBloco == const Color.fromARGB(255, 218, 234, 247)
       ? const Color.fromARGB(255, 50, 84, 112)
       : const Color.fromARGB(255, 218, 234, 247);
