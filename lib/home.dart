@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nubank/areaPix.dart';
+import 'package:nubank/splash.dart';
 import 'components/appBar.dart';
 import 'components/styles.dart';
 import 'myWidgets/linha.dart';
@@ -26,19 +28,26 @@ class _Home extends State<Home> {
           padding: EdgeInsets.all(20),
           child: ListView(
             children: [
-              TextMoney('Saldo em conta', '1.518,38'),
+              TextMoney('Saldo em conta', '-5.234.112,38'),
               Container(
-                margin: EdgeInsetsGeometry.symmetric(vertical: 30),
-                height: 90,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
+                margin: EdgeInsetsGeometry.symmetric(vertical: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    bolinha('assets/figuras/pix.png', 'Área Pix'),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Splash(Areapix(), 1),
+                          ),
+                        );
+                      },
+                      child: bolinha('assets/figuras/pix.png', 'Área Pix'),
+                    ),
                     bolinha('assets/figuras/barrinha.png', 'Pagar'),
-                    bolinha('assets/figuras/dinheiroSobe.png', 'Transferir'),
-                    bolinha('assets/figuras/dinheiroDesce.png', 'Depositar'),
                     bolinha('assets/figuras/celularzao.png', 'Recarga'),
-                    bolinha('assets/figuras/dinheiroBalaozinho.png', 'Cobrar'),
                     bolinha(
                       'assets/figuras/Internet.png',
                       'Transferência Internacional',
@@ -54,7 +63,7 @@ class _Home extends State<Home> {
               TextoMoneyDescription(
                 'Cartão de crédito',
                 'Fatura Atual',
-                '16,44',
+                '-2316,44',
               ),
               SizedBox(height: 10),
               Text(
@@ -66,7 +75,7 @@ class _Home extends State<Home> {
               TextoMoneyDescription(
                 'Empréstimo',
                 'Valor disponível de até',
-                '50.000,00',
+                '100,00 (para negros)',
               ),
 
               Linha(),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/login.dart';
 import 'components/styles.dart';
 
 class Splash extends StatefulWidget {
-  const Splash({super.key});
+  const Splash(this.classe, this.segs, {super.key});
+
+  final Widget classe;
+  final int segs;
 
   @override
   _SplashState createState() => _SplashState();
@@ -14,10 +16,10 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: widget.segs), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Login()),
+        MaterialPageRoute(builder: (context) => widget.classe),
       );
     });
   }

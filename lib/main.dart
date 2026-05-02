@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank/login.dart';
 import 'splash.dart'; //tem que importar
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Remove aquela etiqueta do debug
-      home: Splash(), // Referencio a classe no outro arquivo
+      home: Splash(Login(), 3), // Referencio a classe no outro arquivo
     );
   }
 }

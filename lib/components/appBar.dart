@@ -56,7 +56,7 @@ AppBar appBarNubank = AppBar(
             ),
 
             Text(
-              "Olá, Gabriel",
+              "Olá, Gabriel bostinha rala",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight(600),
