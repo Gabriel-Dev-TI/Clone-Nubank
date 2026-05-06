@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nubank/components/styles.dart';
 import 'package:nubank/home.dart';
 import 'package:nubank/myWidgets/bolinha.dart';
+import 'package:nubank/myWidgets/linha.dart';
+import 'package:nubank/myWidgets/textoCard.dart';
 
 class Areapix extends StatelessWidget {
   const Areapix({super.key});
@@ -28,32 +30,23 @@ class Areapix extends StatelessWidget {
         ],
       ),
       backgroundColor: corFundo,
-      body: ListView(
+      body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            margin: EdgeInsets.only(bottom: 10),
+          Padding(
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(height: 5),
                 Text('Área Pix', style: estiloPreto),
+                SizedBox(height: 5),
                 Text(
                   'Envie e receba pagamentos a qualquer hora e dia da semana, sem pagar nada por isso.',
                   style: TextStyle(color: Color.fromARGB(255, 155, 152, 152)),
                 ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 15),
-                  child: Text('Enviar', style: estiloPreto),
-                ),
+                SizedBox(height: 15),
+                Text('Enviar', style: estiloPreto),
+                SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -65,19 +58,9 @@ class Areapix extends StatelessWidget {
                     bolinha('assets/figuras/qrcode.png', 'Ler QR code'),
                   ],
                 ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: EdgeInsets.only(bottom: 15, top: 10),
-                  child: Text('Receber', style: estiloPreto),
-                ),
+                SizedBox(height: 15),
+                Text('Receber', style: estiloPreto),
+                SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -88,61 +71,27 @@ class Areapix extends StatelessWidget {
               ],
             ),
           ),
-          Divider(),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Registrar ou trazer chaves', style: estiloPreto),
-                    Container(
-                      width: 250,
-                      child: Text(
-                        'Registre uma nova chave ou faça uma portabilidade para Nubank',
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 155, 152, 152),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              ],
+          Linha(),
+          Padding(
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 10),
+            child: TextoCard(
+              texto: 'Registrar ou trazer chaves',
+              subtexto:
+                  'Registre uma nova chave ou faça uma\nportabilidade para Nubank',
+              corSubtexto: Color.fromARGB(255, 155, 152, 152),
             ),
           ),
-          Divider(),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Configurar Pix', style: estiloPreto),
-                    Container(
-                      width: 250,
-                      child: Text(
-                        'Gerencie seu limite diário de transfêrencias ou suas chaves Pix',
-                        style: TextStyle(
-                          color: Color.fromARGB(255, 155, 152, 152),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Icon(Icons.arrow_forward_ios_rounded, size: 15),
-              ],
+          Linha(),
+          Padding(
+            padding: EdgeInsetsGeometry.symmetric(horizontal: 10),
+            child: TextoCard(
+              texto: 'Configurar Pix',
+              subtexto:
+                  'Gerencie seu limite diário de\n transfêrencias ou suas chaves Pix',
+              corSubtexto: Color.fromARGB(255, 155, 152, 152),
             ),
           ),
-          Divider(),
+          Linha(),
         ],
       ),
     );

@@ -3,7 +3,7 @@ import 'package:nubank/areaPix.dart';
 import 'package:nubank/configuracoes.dart';
 import 'components/styles.dart';
 import 'myWidgets/linha.dart';
-import 'myWidgets/textoDinheiro.dart';
+import 'myWidgets/textoCard.dart';
 import 'myWidgets/bolinha.dart';
 import 'myWidgets/cartao.dart';
 import 'myWidgets/bloco.dart';
@@ -102,7 +102,7 @@ class _Home extends State<Home> {
         padding: EdgeInsets.all(20),
         child: ListView(
           children: [
-            TextMoney('Saldo em conta', '1.518,38'),
+            TextoCard(texto: 'Saldo em conta', dinheiro: '1.518,38'),
             Container(
               margin: EdgeInsetsGeometry.symmetric(vertical: 20),
               child: Row(
@@ -138,7 +138,11 @@ class _Home extends State<Home> {
 
             Linha(),
 
-            TextoMoneyDescription('Cartão de crédito', 'Fatura Atual', '16,44'),
+            TextoCard(
+              texto: 'Cartão de crédito',
+              dinheiro: '16,44',
+              subtexto: 'Fatura Atual',
+            ),
             SizedBox(height: 10),
             Text(
               'Limite disponível de R\$ 983,56',
@@ -146,15 +150,15 @@ class _Home extends State<Home> {
             ),
 
             Linha(),
-            TextoMoneyDescription(
-              'Empréstimo',
-              'Valor disponível de até',
-              '50.000,00',
+            TextoCard(
+              texto: 'Empréstimo',
+              dinheiro: '50.000,00',
+              subtexto: 'Valor disponível de até',
             ),
 
             Linha(),
 
-            TextMoney('Total em Caixinhas', '0,00'),
+            TextoCard(texto: 'Total em Caixinhas', dinheiro: '0,00'),
 
             Bloco(100, 100, corBloco, Icon(Icons.add)),
             Row(

@@ -80,7 +80,10 @@ class BlocoInfo extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(backgroundColor: corNubank),
-                  child: Text(buttonText, style: TextStyle(color: corTextos)),
+                  child: Text(
+                    buttonText,
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),
